@@ -1,0 +1,37 @@
+
+Time.java:82: warning: The prover cannot establish an assertion (Assignable: Time.java:75: ) in method setHour:  this.hour
+            this.hour = h;
+                      ^
+Time.java:75: warning: Associated declaration: Time.java:82: 
+      @     	assignable \nothing;
+            	^
+
+Time.java:77: warning: The prover cannot establish an assertion (InvariantExit: Time.java:8: ) in method setHour
+    public void setHour(int h) 
+                ^
+Time.java:8: warning: Associated declaration: Time.java:77: 
+      public invariant 0 <= hour && hour < 24; @*/
+             ^
+Time.java:79: warning: The prover cannot establish an assertion (ExceptionList: Time.java:76: ) in method setHour
+        if (h < 0 || 24 <= h && !(isTimeZero())) { // if (h < 0 || 24 <= h) {
+                                            ^
+Time.java:76: warning: Associated declaration: Time.java:79: 
+      @  	signals_only IllegalArgumentException; @*/
+         	^
+
+Time.java:60: warning: The prover cannot establish an assertion (Assignable: Time.java:57: ) in method setMinute:  minute
+    {	minute=59;
+     	      ^
+Time.java:57: warning: Associated declaration: Time.java:60: 
+      @     	assignable \nothing;
+            	^
+
+
+
+Time.java:160: warning: The prover cannot establish an assertion (Postcondition: Time.java:159: ) in method timer
+    public void timer(int h, int m, int s)
+                ^
+Time.java:159: warning: Associated declaration: Time.java:160: 
+    //@ ensures convertToSeconds() == 0;
+        ^
+10 warnings

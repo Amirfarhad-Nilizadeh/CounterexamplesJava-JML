@@ -1,0 +1,51 @@
+Time.java:223: warning: The prover cannot establish an assertion (Postcondition: Time.java:214: ) in method equals
+        return !(this.hour == t.hour && this.minute == t.minute && this.second == t.second); //return this.hour == t.hour && this.minute == t.minute && this.second == t.second;
+        ^
+Time.java:214: warning: Associated declaration: Time.java:223: 
+    /*@    	ensures \result <==> (this.hour == ((Time) o).hour)
+           	^
+Time.java:223: warning: The prover cannot establish an assertion (Postcondition: /home/amirfarhad/Desktop/ProgramAnalysis/Tools/openjml/openjml.jar(specs/java/lang/Object.jml):82: ) in method equals
+        return !(this.hour == t.hour && this.minute == t.minute && this.second == t.second); //return this.hour == t.hour && this.minute == t.minute && this.second == t.second;
+        ^
+/home/amirfarhad/Desktop/ProgramAnalysis/Tools/openjml/openjml.jar(specs/java/lang/Object.jml):82: warning: Associated declaration: Time.java:223: 
+      @     ensures \result;
+            ^
+
+Time.java:199: warning: The prover cannot establish an assertion (Assignable: Time.java:192: ) in method later_than:  second
+  		decr();
+  		    ^
+Time.java:192: warning: Associated declaration: Time.java:199: 
+    /*@ ensures \result == ((this.hour > start.hour) 
+        ^
+
+
+Time.java:199: warning: The prover cannot establish an assertion (Assignable: Time.java:192: ) in method later_than:  minute
+  		decr();
+  		    ^
+Time.java:192: warning: Associated declaration: Time.java:199: 
+    /*@ ensures \result == ((this.hour > start.hour) 
+        ^
+
+
+
+Time.java:199: warning: The prover cannot establish an assertion (Assignable: Time.java:192: ) in method later_than:  hour
+  		decr();
+  		    ^
+Time.java:192: warning: Associated declaration: Time.java:199: 
+    /*@ ensures \result == ((this.hour > start.hour) 
+        ^
+
+Time.java:46: warning: The prover cannot establish an assertion (Assignable: Time.java:39: ) in method setSecond:  this.second
+            this.second = s;
+                        ^
+Time.java:39: warning: Associated declaration: Time.java:46: 
+      @     	assignable \nothing;
+            	^
+
+Time.java:41: warning: The prover cannot establish an assertion (InvariantExit: Time.java:6: ) in method setSecond
+    public void setSecond(int s) 
+                ^
+Time.java:6: warning: Associated declaration: Time.java:41: 
+    /*@ public invariant 0 <= second && second < 60;
+               ^
+14 warnings

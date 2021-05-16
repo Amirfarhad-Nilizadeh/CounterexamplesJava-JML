@@ -1,0 +1,19 @@
+StackQueue.java:37: warning: The prover cannot establish an assertion (ArithmeticOperationRange) in method isFull:  underflow in int difference
+	        	return (top == search(MAX) - 1); // return (top == MAX - 1); 
+	        	                           ^
+StackQueue.java:37: warning: The prover cannot establish an assertion (Postcondition: StackQueue.java:33: ) in method isFull
+	        	return (top == search(MAX) - 1); // return (top == MAX - 1); 
+	        	^
+StackQueue.java:33: warning: Associated declaration: StackQueue.java:37: 
+	    	//@ 	ensures \result <==> top == MAX - 1;
+	    	    	^
+StackQueue.java:101: warning: The prover cannot establish an assertion (PossiblyNegativeIndex) in method peek
+            			return arr[top]; 
+            			          ^
+StackQueue.java:103: warning: The prover cannot establish an assertion (ExceptionalPostcondition: StackQueue.java:88: ) in method peek
+            			throw new IllegalArgumentException();
+            			^
+StackQueue.java:88: warning: Associated declaration: StackQueue.java:103: 
+    	   	/*@ public normal_behavior
+    	   	           ^
+6 warnings

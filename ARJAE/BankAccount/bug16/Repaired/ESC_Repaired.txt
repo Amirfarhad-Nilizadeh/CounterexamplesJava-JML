@@ -1,0 +1,17 @@
+
+
+BankAccount.java:129: warning: The prover cannot establish an assertion (Postcondition: BankAccount.java:121: ) in method withdraw
+	void withdraw(int amount)
+	     ^
+BankAccount.java:121: warning: Associated declaration: BankAccount.java:129: 
+	//@ ensures balance == \old (balance);
+	    ^
+
+
+BankAccount.java:129: warning: The prover cannot establish an assertion (Postcondition: BankAccount.java:122: ) in method withdraw
+	void withdraw(int amount)
+	     ^
+BankAccount.java:122: warning: Associated declaration: BankAccount.java:129: 
+	//@ ensures previousTransaction == \old (previousTransaction);
+	    ^
+4 warnings

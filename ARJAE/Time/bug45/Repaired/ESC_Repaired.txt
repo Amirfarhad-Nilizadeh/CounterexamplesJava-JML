@@ -1,0 +1,7 @@
+Time.java:216: warning: The prover cannot establish an assertion (Postcondition: Time.java:207: ) in method equals
+        return this.hour >= t.hour && this.minute == t.minute && this.second == t.second; // return this.hour != t.hour && this.minute == t.minute && this.second == t.second;// return this.hour == t.hour && this.minute == t.minute && this.second == t.second;
+        ^
+Time.java:207: warning: Associated declaration: Time.java:216: 
+    /*@    	ensures \result <==> (this.hour == ((Time) o).hour)
+           	^
+2 warnings

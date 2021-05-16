@@ -1,0 +1,14 @@
+Alphabet.java:224: warning: The prover cannot establish an assertion (InvariantLeaveCaller: Alphabet.java:17: ) in method driver:  (Caller: Alphabet.driver(int), Callee: Alphabet.isUppercase())
+		result[0] = isUppercase();
+		                       ^
+Alphabet.java:17: warning: Associated declaration: Alphabet.java:224: 
+   //@ private invariant uppercase_set ==> (uppercase == ('A' <= c && c <= 'Z'));
+               ^
+
+Alphabet.java:67: warning: The prover cannot establish an assertion (Postcondition: Alphabet.java:60: ) in method isUppercase
+	return uppercase;
+	^
+Alphabet.java:60: warning: Associated declaration: Alphabet.java:67: 
+     @   ensures uppercase_set && \result == uppercase; 
+         ^
+4 warnings
