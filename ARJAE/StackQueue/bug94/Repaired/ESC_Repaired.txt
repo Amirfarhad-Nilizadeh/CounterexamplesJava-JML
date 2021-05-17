@@ -1,0 +1,10 @@
+StackQueue.java:474: warning: The prover cannot establish an assertion (Postcondition: StackQueue.java:470: ) in method stackDivideQ
+		return (stack.peek() / Q.peek()) != 0 ? 1 : 0; // return  (stack.peek()/Q.peek()) == 0 ? 1 : 0; // return  stack.peek()/Q.peek();
+		^
+StackQueue.java:470: warning: Associated declaration: StackQueue.java:474: 
+      	  @ ensures \result == stack.peek() / Q.peek();
+      	    ^
+StackQueue.java:362: warning: There is no feasible path to program point at program exit in method StackQueue.stackDivision(StackQueue.Stack)
+    	public int stackDivision(Stack stack) 
+    	           ^
+3 warnings
